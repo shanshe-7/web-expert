@@ -16,6 +16,7 @@ export const ContentTextWrapper = styled.div`
 
 export const ContentTextAndImageWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const ContentHeader = styled.h2`
