@@ -29,7 +29,7 @@ export const ContentDescription = styled.p`
   line-height: 30px;
   color: #fff;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 export const ContentImage = styled.img`
@@ -50,9 +50,7 @@ export const BulletWrapper = styled.li`
   width: 100%;
   display: flex;
   align-items: center;
-  :not(:last-child) {
-    margin-bottom: 10px;
-  }
+  padding: 5px 0;
 `;
 
 export const BulletRedIndicator = styled.div`
