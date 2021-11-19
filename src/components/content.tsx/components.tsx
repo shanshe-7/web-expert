@@ -2,14 +2,20 @@ import styled from "styled-components";
 
 export const ContentWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   margin-top: 40px;
   justify-content: space-between;
 `;
 
 export const ContentTextWrapper = styled.div`
   display: flex;
-  flex-direction: column;
   max-width: 380px;
+  margin-right: 40px;
+  flex-direction: column;
+`;
+
+export const ContentTextAndImageWrapper = styled.div`
+  display: flex;
 `;
 
 export const ContentHeader = styled.h2`
@@ -23,6 +29,7 @@ export const ContentDescription = styled.p`
   line-height: 30px;
   color: #fff;
   margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 export const ContentImage = styled.img`
@@ -31,13 +38,15 @@ export const ContentImage = styled.img`
   object-fit: contain;
 `;
 
-export const ContentBulletsWrapper = styled.div`
-  margin-top: 20px;
+export const ContentBulletsWrapper = styled.ul`
   display: flex;
   flex-direction: column;
+  list-style-position: outside;
+  list-style: none;
+  padding-left: 0;
 `;
 
-export const BulletWrapper = styled.div`
+export const BulletWrapper = styled.li`
   width: 100%;
   display: flex;
   align-items: center;
@@ -66,4 +75,5 @@ export const BulletText = styled.div`
   font: 18px, Sora-r;
   line-height: 30px;
   color: #fff;
+  width: 100%;
 `;

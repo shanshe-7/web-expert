@@ -11,7 +11,7 @@ import {
   CompensationTotalPrice,
 } from "./components";
 
-const Compensation = (props: Omit<CalculatorState, "isCompensationOpen">) => {
+const Compensation = (props: CalculatorState) => {
   const { emplCompDays, healthInsuranceDays, sickDays, dailyAllowance } = props;
   return (
     <>

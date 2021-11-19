@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const CalculatorWrapper = styled.div`
+export const CalculatorWrapper = styled.section`
   width: 320px;
+  min-width: 320px;
   height: fit-content;
   background: #fff;
   position: relative;
@@ -131,7 +132,6 @@ export const CalcButton = styled.button<any>`
   color: white;
   cursor: pointer;
   border: none;
-  margin-bottom: ${({ hasBottomMargin }) => hasBottomMargin && `55px`};
 `;
 
 export const Line = styled.div`

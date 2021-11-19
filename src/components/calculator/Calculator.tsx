@@ -19,7 +19,7 @@ const Calculator = () => {
     emplCompDays: 0,
     healthInsuranceDays: 0,
     dailyAllowance: 0,
-    isCompensationOpen: false,
+
     sickDays: 0,
   });
   const incomeRef = useRef<HTMLInputElement>();
@@ -44,7 +44,6 @@ const Calculator = () => {
           emplCompDays: 0,
           healthInsuranceDays: 0,
           dailyAllowance: 0,
-          isCompensationOpen: true,
         });
       }
       const dailyAllowance = +(((70 / 100) * Number(incomeValue)) / 30).toFixed(
@@ -54,9 +53,9 @@ const Calculator = () => {
         setCalculatorState({
           ...calculatorState,
           sickDays: +sickDays,
-          emplCompDays: +sickDays - 4,
+          emplCompDays: +sickDays - 3,
           dailyAllowance,
-          isCompensationOpen: true,
+
           healthInsuranceDays: 0,
         });
       } else {
@@ -73,18 +72,12 @@ const Calculator = () => {
           emplCompDays: 4,
           dailyAllowance,
           healthInsuranceDays: +sickDays - 8,
-          isCompensationOpen: true,
         });
       }
     }
   };
-  const {
-    emplCompDays,
-    healthInsuranceDays,
-    dailyAllowance,
-    sickDays,
-    isCompensationOpen,
-  } = calculatorState;
+  const { emplCompDays, healthInsuranceDays, dailyAllowance, sickDays } =
+    calculatorState;
 
   return (
     <CalculatorWrapper>
@@ -115,18 +108,15 @@ const Calculator = () => {
             I have tubercolosis
           </CheckBoxLabel>
         </CheckBoxWrapper>
-        <CalcButton hasBottomMargin={!isCompensationOpen} type="Submit">
-          Calculate
-        </CalcButton>
+        <CalcButton type="Submit">Calculate</CalcButton>
       </CalculatorForm>
-      {isCompensationOpen && (
-        <Compensation
-          sickDays={sickDays}
-          emplCompDays={emplCompDays}
-          healthInsuranceDays={healthInsuranceDays}
-          dailyAllowance={dailyAllowance}
-        />
-      )}
+
+      <Compensation
+        sickDays={sickDays}
+        emplCompDays={emplCompDays}
+        healthInsuranceDays={healthInsuranceDays}
+        dailyAllowance={dailyAllowance}
+      />
     </CalculatorWrapper>
   );
 };
