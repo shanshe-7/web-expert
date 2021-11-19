@@ -39,6 +39,7 @@ export const ContentDescription = styled.p`
 export const ContentImage = styled.img`
   width: 240px;
   object-fit: cover;
+  border-radius: 4px;
 `;
 
 export const ContentBulletsWrapper = styled.ul`
