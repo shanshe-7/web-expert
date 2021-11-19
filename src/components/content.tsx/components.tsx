@@ -5,18 +5,22 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   margin-top: 40px;
   justify-content: space-between;
+  & > ul {
+    margin-top: 15px;
+  }
 `;
 
 export const ContentTextWrapper = styled.div`
   display: flex;
-  max-width: 380px;
-  margin-right: 40px;
+  width: 380px;
   flex-direction: column;
 `;
 
 export const ContentTextAndImageWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
 `;
 
 export const ContentHeader = styled.h2`
@@ -30,12 +34,10 @@ export const ContentDescription = styled.p`
   line-height: 30px;
   color: #fff;
   margin-top: 20px;
-  margin-bottom: 15px;
 `;
 
 export const ContentImage = styled.img`
   width: 240px;
-  height: 180px;
   object-fit: contain;
 `;
 
