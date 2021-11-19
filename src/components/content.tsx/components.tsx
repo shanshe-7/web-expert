@@ -38,7 +38,7 @@ export const ContentDescription = styled.p`
 
 export const ContentImage = styled.img`
   width: 240px;
-  object-fit: cover;
+  height: 180px;
   border-radius: 4px;
 `;
 
