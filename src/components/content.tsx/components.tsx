@@ -20,17 +20,17 @@ export const ContentTextAndImageWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
 `;
 
 export const ContentHeader = styled.h2`
-  font: 32px, Sora-b;
+  font: 32px Sora-b;
   line-height: 35px;
   color: #fff;
 `;
 
 export const ContentDescription = styled.p`
-  font: 18px, Sora-r;
+  font: 18px Sora-r;
   line-height: 30px;
   color: #fff;
   margin-top: 20px;
@@ -38,7 +38,7 @@ export const ContentDescription = styled.p`
 
 export const ContentImage = styled.img`
   width: 240px;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 export const ContentBulletsWrapper = styled.ul`
@@ -73,7 +73,7 @@ export const BulletSilverIndicator = styled.div`
 `;
 
 export const BulletText = styled.div`
-  font: 18px, Sora-r;
+  font: 18px Sora-r;
   line-height: 30px;
   color: #fff;
   width: 100%;
