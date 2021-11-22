@@ -14,6 +14,9 @@ export const ContentTextWrapper = styled.div`
   display: flex;
   width: 380px;
   flex-direction: column;
+  @media only screen and (max-width: 375px) {
+    width: 300px;
+  }
 `;
 
 export const ContentTextAndImageWrapper = styled.div`
@@ -27,6 +30,9 @@ export const ContentHeader = styled.h2`
   font: 32px Sora-b;
   line-height: 35px;
   color: #fff;
+  @media only screen and (max-width: 375px) {
+    font-size: 22px;
+  }
 `;
 
 export const ContentDescription = styled.p`
@@ -34,6 +40,9 @@ export const ContentDescription = styled.p`
   line-height: 30px;
   color: #fff;
   margin-top: 20px;
+  @media only screen and (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 export const ContentImage = styled.img`
@@ -102,4 +111,7 @@ export const BulletText = styled.div`
   line-height: 30px;
   color: #fff;
   width: 100%;
+  @media only screen and (max-width: 375px) {
+    font-size: 12px;
+  }
 `;

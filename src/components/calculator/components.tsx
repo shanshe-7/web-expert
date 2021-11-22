@@ -29,6 +29,11 @@ export const CalculatorWrapper = styled.section`
     border-bottom: none;
     border-top: 25px solid #fff;
   }
+  @media only screen and (max-width: 375px) {
+    width: 280px;
+    min-width: 280px;
+    border-top: 0.1px solid #fff;
+  }
 `;
 
 export const CalculatorHeader = styled.h4`
