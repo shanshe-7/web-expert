@@ -46,7 +46,7 @@ const Calculator = () => {
           dailyAllowance: 0,
         });
       }
-      const dailyAllowance = +(((70 / 100) * Number(incomeValue)) / 30).toFixed(
+      const dailyAllowance = +((Number(incomeValue) / 30) * 0.7 * 0.8).toFixed(
         2
       );
       if (+sickDays < 9 && +sickDays > 4) {
@@ -60,16 +60,15 @@ const Calculator = () => {
         });
       } else {
         if ((+sickDays > 182 && !isChecked) || +sickDays > 240) {
-          alert(
+          return alert(
             "The maximum duration of one insurance event is 182 days, unless it’s tuberculosis. For tuberculosis it is up to 240 days"
           );
-          return;
         }
 
         setCalculatorState({
           ...calculatorState,
           sickDays: +sickDays,
-          emplCompDays: 4,
+          emplCompDays: 5,
           dailyAllowance,
           healthInsuranceDays: +sickDays - 8,
         });

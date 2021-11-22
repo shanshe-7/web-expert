@@ -50,9 +50,33 @@ export const ContentBulletsWrapper = styled.ul`
   padding-left: 0;
 `;
 
+export const NestedUlList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  list-style-position: outside;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+`;
+
 export const BulletWrapper = styled.li`
   width: 100%;
   display: flex;
+  align-items: center;
+  padding: 5px 0;
+`;
+
+export const NestedListContentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+`;
+
+export const NestedBullet = styled.li`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 5px 0;
 `;

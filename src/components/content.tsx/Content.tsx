@@ -12,6 +12,9 @@ import {
   BulletText,
   BulletSilverIndicator,
   ContentTextAndImageWrapper,
+  NestedUlList,
+  NestedBullet,
+  NestedListContentWrapper,
 } from "./components";
 
 const Content = () => {
@@ -33,20 +36,22 @@ const Content = () => {
           <BulletRedIndicator />
           <BulletText>Tellus Ullamcorper Inceptos</BulletText>
         </BulletWrapper>
-        <BulletWrapper>
-          <BulletRedIndicator />
-          <BulletText>Magna Condimentum</BulletText>
-        </BulletWrapper>
-        <ContentBulletsWrapper>
-          <BulletWrapper>
-            <BulletSilverIndicator />
-            <BulletText>Mattis Tristique</BulletText>
-          </BulletWrapper>
-          <BulletWrapper>
-            <BulletSilverIndicator />
-            <BulletText>Pharetra Pellentesque Dapibus</BulletText>
-          </BulletWrapper>
-        </ContentBulletsWrapper>
+        <NestedBullet>
+          <NestedListContentWrapper>
+            <BulletRedIndicator />
+            <BulletText>Magna Condimentum</BulletText>
+          </NestedListContentWrapper>
+          <NestedUlList>
+            <BulletWrapper>
+              <BulletSilverIndicator />
+              <BulletText>Mattis Tristique</BulletText>
+            </BulletWrapper>
+            <BulletWrapper>
+              <BulletSilverIndicator />
+              <BulletText>Pharetra Pellentesque Dapibus</BulletText>
+            </BulletWrapper>
+          </NestedUlList>
+        </NestedBullet>
         <BulletWrapper>
           <BulletRedIndicator />
           <BulletText>Aenean Inceptos</BulletText>
