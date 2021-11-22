@@ -37,7 +37,7 @@ const Calculator = () => {
       if (+incomeValue < 0 || +sickDays < 0) {
         return alert("please provide correct information");
       }
-      if (+sickDays <= 4) {
+      if (+sickDays < 4) {
         return setCalculatorState({
           ...calculatorState,
           sickDays: +sickDays,
@@ -49,7 +49,7 @@ const Calculator = () => {
       const dailyAllowance = +((Number(incomeValue) / 30) * 0.7 * 0.8).toFixed(
         2
       );
-      if (+sickDays < 9 && +sickDays > 4) {
+      if (+sickDays < 9 && +sickDays >= 4) {
         setCalculatorState({
           ...calculatorState,
           sickDays: +sickDays,
